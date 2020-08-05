@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+   <style name="AppTheme.NoActionBar">
+       <item name="windowActionBar">false</item>
+       <item name="windowNoTitle">true</item>
+   </style>
+
+    <style name="AppTheme.NoActionBar.TranslucentStatusBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">#151C25</item>
+    </style>
+    <style name="AppTheme.NoActionBar.TranslucentStatusBar_Second">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.Button.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100%</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#E5B80D</item>
+        <item name="colorControlActivated">#E5B80D</item>
+    </style>
+
+    <style name="SmallTilte">
+        <item name = "android:textSize">11sp</item>
+        <item name= "android:textColor">@color/colorTextSmall</item>
+    </style>
+
+    <style name="SmallNameRateTextView">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="SmallTextTab">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="SecondSmallTitle">
+        <item name="android:textSize">12sp</item>
+        <item name= "android:textColor">@color/colorTextSmall</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="moreLinkStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="smallestText">
+      <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/colorTextSmall</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.Button.round" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">22dp</item>
+        <item name="cornerSizeBottomRight">22dp</item>
+        <item name="cornerSizeBottomLeft">22dp</item>
+        <item name="cornerSizeTopLeft">22dp</item>
+    </style>
+
+    <style name="text_style_in_round_txt">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:paddingStart">5dp</item>
+    </style>
+
+
+</resources>

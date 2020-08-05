@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="130dp"
+    android:layout_marginEnd="15dp"
+    android:layout_height="match_parent"
+   >
+  <com.google.android.material.card.MaterialCardView
+      android:layout_width="132dp"
+      android:layout_height="180dp"
+      android:layout_marginEnd="17dp"
+      >
+  <ImageView
+      android:id="@+id/ivPopular"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:scaleType="centerCrop"
+      android:src="@drawable/movieimage"/>
+  </com.google.android.material.card.MaterialCardView>
+  <TextView
+      android:id="@+id/tvPopularMovieName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Long King"
+      android:maxLines="1"
+      android:maxWidth="186dp"
+      android:textColor="@android:color/white"
+      style="@style/SmallNameRateTextView"
+      android:layout_marginTop="10dp"/>
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="5dp">
+    <TextView
+        android:id="@+id/tvRbPopularVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SmallNameRateTextView"
+        android:text="8.25"/>
+    <RatingBar
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:id="@+id/rbPopularMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="4.5"
+        android:layout_marginLeft="12dp"
+        android:theme="@style/RatingBar"
+        android:numStars="5" />
+  </LinearLayout>
+</LinearLayout>

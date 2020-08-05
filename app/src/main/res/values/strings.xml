@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PADC_TheMovieApp_Tutorial_TYNO</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="em_no_movies">Movies are not available for now</string>
+</resources>
