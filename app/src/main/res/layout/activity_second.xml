@@ -242,31 +242,10 @@
                         app:strokeColor="@android:color/white"
                         app:strokeWidth="2dp" />
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:background="#1E2633"
-                    android:orientation="vertical"
-                 >
-
-                    <TextView
-                        style="@style/smallestText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginStart="20dp"
-                        android:text="ACTORS" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvCast"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:nestedScrollingEnabled="true"
-                        tools:listitem="@layout/rv_actor_layout" />
-                </LinearLayout>
+        <include layout = "@layout/layout_cast_view_pod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vpCast"/>
 
                 <TextView
                     style="@style/SecondSmallTitle"
@@ -391,7 +370,8 @@
                 android:textSize="12sp"
           />
         </LinearLayout>
-                <include layout="@layout/layout_creators"/>
+                <include layout="@layout/layout_creators"
+                    android:id="@+id/vpCreator"/>
     </LinearLayout>
             <include
                 android:id="@+id/vpEmptySecond"

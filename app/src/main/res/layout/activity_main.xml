@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
 <ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_main_bg"
@@ -53,61 +52,36 @@
                 android:layout_height="230dp"
                 android:outlineSpotShadowColor="#5E5A5A">
                 <include layout = "@layout/layout_video"
+                    android:id="@+id/vpSliderVideo"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="The Wolverine 2013. \nOfficial Review"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold"
-                    android:textSize="26sp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginBottom="8dp"/>
             </FrameLayout>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp">
-                <TextView
-                    android:id="@+id/tvPopular"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BEST  POPULAR  FILMS  AND  SERIES"
-                    style="@style/SmallTilte"
-                    android:layout_marginBottom="8dp"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvPopularFilm"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@id/tvPopular"
-                    android:layout_marginTop="13dp"
-                    android:nestedScrollingEnabled="true"
-                    android:orientation="horizontal"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/rv_best_popular_film" />
-
-            </RelativeLayout>
+          <include layout="@layout/popular_movie_view_pod"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginStart="20dp"
+              android:id="@+id/vpPopularMovie"/>
         </LinearLayout>
 
     <include layout="@layout/layout_check_movie_popular"/>
 
     <include layout="@layout/layout_tab_list_view_pod"
+        android:id="@+id/vpTabAndPager"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp" />
 
     <include
+        android:id="@+id/vpShowCase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/layout_showcases" />
+        layout="@layout/layout_showcases"
+        android:layout_marginTop="20dp"/>
 
    <include
+       android:id="@+id/vpBestActor"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        layout = "@layout/layout_best_actors"/>

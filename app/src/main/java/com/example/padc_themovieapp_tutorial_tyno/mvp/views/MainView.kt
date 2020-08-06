@@ -6,7 +6,6 @@ interface MainView : BaseView{
     fun displayPopularMovieList(movieList : List<PopularMovieVO>)
     fun displayBestActorList(actorList : List<BestActorVO>)
     fun displayUpComingMovie(movieList : List<UpComingVO>)
-    fun showVideo()
     fun navigateToSecondView(movieId : Int)
     fun navigateToPlayerView(movieId: Int)
     fun displayGenereList(generes : List<GenereVO>)

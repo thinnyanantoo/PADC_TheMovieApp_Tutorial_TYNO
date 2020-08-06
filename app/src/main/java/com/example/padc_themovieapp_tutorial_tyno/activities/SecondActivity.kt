@@ -21,24 +21,15 @@ import com.example.padc_themovieapp_tutorial_tyno.mvp.views.SecondView
 import com.example.padc_themovieapp_tutorial_tyno.utiils.EMPTY_IMAGE_URL
 import com.example.padc_themovieapp_tutorial_tyno.utiils.EM_NO_MOVIES_AVAILABLE
 import com.example.padc_themovieapp_tutorial_tyno.utiils.IMAGE_URL
+import com.example.padc_themovieapp_tutorial_tyno.views.viewpods.CastViewPod
+import com.example.padc_themovieapp_tutorial_tyno.views.viewpods.CreatorViewPod
 import com.example.padc_themovieapp_tutorial_tyno.views.viewpods.EmptyViewPod
 import kotlinx.android.synthetic.main.activity_second.*
 import kotlinx.android.synthetic.main.activity_second.swipeRefreshLayout
+import kotlinx.android.synthetic.main.layout_best_actors.*
 import kotlinx.android.synthetic.main.layout_creators.*
 
 class SecondActivity : AppCompatActivity() , SecondView {
-    private lateinit var viewPodEmpty: EmptyViewPod
-    override fun enableSwipeRefresh() {
-        swipeRefreshLayout.isRefreshing = true
-    }
-
-    override fun disableSwipeRefresh() {
-       swipeRefreshLayout.isRefreshing = false
-    }
-
-    override fun displayEmptyView() {
-       showEmptyView()
-    }
 
     private lateinit var mCrewAdapter: CrewAdapter
     private lateinit var mCastAdapter : CastAdapter
@@ -46,6 +37,10 @@ class SecondActivity : AppCompatActivity() , SecondView {
     private lateinit var mPresenter : SecondPresenter
 
     private var mPopularModel : PopularMovieModel = PopularMovieModelImpl
+
+    private lateinit var viewPodEmpty: EmptyViewPod
+    private lateinit var castViewPod : CastViewPod
+    private lateinit var creatorViewPod: CreatorViewPod
 
     var movieId = 0
 
@@ -64,12 +59,17 @@ class SecondActivity : AppCompatActivity() , SecondView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
+
+        castViewPod = vpCast as CastViewPod
+        viewPodEmpty= vpEmptySecond as EmptyViewPod
+        creatorViewPod = vpCreator as CreatorViewPod
+
+
         setUpPresenter()
         setGetData()
         movieId = intent.getIntExtra(MOVIES_ID_EXTRA, 0)
         setUpRecycler()
         setUpListener()
-    //    setUpViewPod()
         mPresenter.onUiReady(movieId)
 
     }
@@ -87,6 +87,17 @@ class SecondActivity : AppCompatActivity() , SecondView {
         tvTime.text =  "${movieDetailVO.runTime/60}h ${movieDetailVO.runTime%60}min"
 
 
+    }
+    override fun enableSwipeRefresh() {
+        swipeRefreshLayout.isRefreshing = true
+    }
+
+    override fun disableSwipeRefresh() {
+        swipeRefreshLayout.isRefreshing = false
+    }
+
+    override fun displayEmptyView() {
+      //  showEmptyView()
     }
 
     private fun setGetData(){
@@ -111,13 +122,9 @@ class SecondActivity : AppCompatActivity() , SecondView {
 
     private fun setUpRecycler(){
         mCastAdapter = CastAdapter()
-        val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        rvCast.layoutManager = linearLayoutManager
-        rvCast.adapter = mCastAdapter
+        castViewPod.onbindActorAdapter(mCastAdapter)
         mCrewAdapter = CrewAdapter()
-        val linearLayoutManagerCrew = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
-        rvCreators.layoutManager = linearLayoutManagerCrew
-        rvCreators.adapter = mCrewAdapter
+        creatorViewPod.onBindCrewAdapter(mCrewAdapter)
     }
 
     private fun setUpPresenter(){
@@ -139,7 +146,6 @@ class SecondActivity : AppCompatActivity() , SecondView {
     }
 
     private fun setUpViewPod() {
-        viewPodEmpty= vpEmptySecond as EmptyViewPod
         viewPodEmpty.setEmptyData(EM_NO_MOVIES_AVAILABLE, EMPTY_IMAGE_URL)
     }
 

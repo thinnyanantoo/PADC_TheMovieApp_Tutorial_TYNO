@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.padc_themovieapp_tutorial_tyno.R
 import com.example.padc_themovieapp_tutorial_tyno.activities.VideoPlayerActivity
 import com.example.padc_themovieapp_tutorial_tyno.utiils.IMAGE_URL
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_image_slider.*
 
 class ImageSliderFragment : Fragment() {
@@ -24,9 +25,11 @@ class ImageSliderFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val url = arguments?.getString(IMAGE_URL_KEY)
         val movieId = arguments?.getInt(ID_KEY)
+        val movieName = arguments?.getString(MOVIE_NAME)
         Glide.with(view.context)
             .load(IMAGE_URL + "original" +url)
             .into(ivSliderImage)
+        tvSliderMovieName.text = movieName
 
         ivSliderImage.setOnClickListener {
             startActivity(VideoPlayerActivity.newIntent(context!!, movieId!!))
@@ -38,11 +41,14 @@ class ImageSliderFragment : Fragment() {
 
         const val ID_KEY = "ID_KEY"
 
-        fun newInstance(url : String, id : Int) : ImageSliderFragment {
+        const val MOVIE_NAME = "MOVIE_NAME"
+
+        fun newInstance(url : String, id : Int , name : String) : ImageSliderFragment {
             val fragment = ImageSliderFragment()
             val bundle = Bundle()
             bundle.putString(IMAGE_URL_KEY, url)
             bundle.putInt(ID_KEY,id)
+            bundle.putString(MOVIE_NAME, name)
             fragment.arguments = bundle
             return fragment
         }

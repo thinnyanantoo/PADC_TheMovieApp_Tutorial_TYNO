@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 <ImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ivSliderImage"
     android:layout_width="match_parent"
     android:scaleType="centerCrop"
     android:layout_height="240dp"/>
+     <TextView
+            android:id="@+id/tvSliderMovieName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="The Wolverine 2013. \nOfficial Review"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="25dp"
+     android:layout_marginBottom="8dp"/>
+</FrameLayout>

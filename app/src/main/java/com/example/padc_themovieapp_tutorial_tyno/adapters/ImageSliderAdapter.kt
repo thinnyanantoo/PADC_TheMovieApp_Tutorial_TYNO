@@ -11,7 +11,7 @@ class ImageSliderAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdap
     var movies: List<PopularMovieVO> = listOf()
 
     override fun createFragment(position: Int): Fragment {
-        return ImageSliderFragment.newInstance(movies[position].posterPath,movies[position].id.toInt())
+        return ImageSliderFragment.newInstance(movies[position].posterPath,movies[position].id.toInt(),movies[position].title.toString())
     }
 
     override fun getItemCount(): Int {

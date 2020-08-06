@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
+<com.example.padc_themovieapp_tutorial_tyno.views.viewpods.SliderViewPod android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<!--    <FrameLayout-->
-<!--        android:id="@+id/videoContainer"-->
-<!--        android:layout_width="409dp"-->
-<!--        android:layout_height="230dp"-->
-<!--        android:outlineSpotShadowColor="#5E5A5A">-->
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPagerSlider"
                 android:layout_width="match_parent"
@@ -24,5 +19,4 @@
             android:layout_marginBottom="9dp"
             app:tabBackground="@color/colorTextSmall"
             app:tabIndicatorHeight="0dp"/>
-<!--    </FrameLayout>-->
-</LinearLayout>
+</com.example.padc_themovieapp_tutorial_tyno.views.viewpods.SliderViewPod>
