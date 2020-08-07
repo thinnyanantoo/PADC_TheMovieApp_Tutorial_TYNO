@@ -48,8 +48,6 @@ class MainActivity : AppCompatActivity() , MainView  {
     private lateinit var msliderAdapter : ImageSliderAdapter
     private lateinit var mShowCaseAdapter: ShowCaseAdapter
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

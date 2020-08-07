@@ -3,25 +3,26 @@ package com.example.padc_themovieapp_tutorial_tyno.mvp.presenters.Impls
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import com.example.padc_themovieapp_tutorial_tyno.data.models.Impls.PopularMovieModelImpl
+import com.example.padc_themovieapp_tutorial_tyno.data.models.PopularMovieModel
 import com.example.padc_themovieapp_tutorial_tyno.mvp.presenters.AbstractBasePresenter
 import com.example.padc_themovieapp_tutorial_tyno.mvp.presenters.MainPresenter
 import com.example.padc_themovieapp_tutorial_tyno.mvp.views.MainView
 
 class MainPresenterImpl : MainPresenter, AbstractBasePresenter<MainView>(){
 
-   private  val mPopularModel = PopularMovieModelImpl
+   var mPopularModel : PopularMovieModel = PopularMovieModelImpl
     override fun onSwipeRefrresh(lifecycleOwner: LifecycleOwner) {
         requestAllPopularMovies(lifecycleOwner)
         requestAllBestActor(lifecycleOwner)
        requestAllGenereList(lifecycleOwner)
-        requestAllUpComingList(lifecycleOwner)
+     //   requestAllUpComingList(lifecycleOwner)
     }
 
     override fun onUiReady(lifecycleOwner: LifecycleOwner) {
         requestAllPopularMovies(lifecycleOwner)
         requestAllBestActor(lifecycleOwner)
       requestAllGenereList(lifecycleOwner)
-        requestAllUpComingList(lifecycleOwner)
+       // requestAllUpComingList(lifecycleOwner)
     }
 
     override fun onTapPlay(movieId: Int) {
@@ -88,17 +89,17 @@ class MainPresenterImpl : MainPresenter, AbstractBasePresenter<MainView>(){
 //        })
 
   //  }
-    private fun requestAllUpComingList(lifecycleOwner: LifecycleOwner){
-        mView?.enableSwipeRefresh()
-        mPopularModel.getAllUpComing (onError = {
-            mView?.disableSwipeRefresh()
-            mView?.displayEmptyView()
-        }).observe(lifecycleOwner, Observer {
-            mView?.disableSwipeRefresh()
-            if(it.isEmpty())
-                mView?.displayEmptyView()
-            else
-                mView?.displayUpComingMovie(it)
-        })
-    }
+//    private fun requestAllUpComingList(lifecycleOwner: LifecycleOwner){
+//        mView?.enableSwipeRefresh()
+//        mPopularModel.getAllUpComing (onError = {
+//            mView?.disableSwipeRefresh()
+//            mView?.displayEmptyView()
+//        }).observe(lifecycleOwner, Observer {
+//            mView?.disableSwipeRefresh()
+//            if(it.isEmpty())
+//                mView?.displayEmptyView()
+//            else
+//                mView?.displayUpComingMovie(it)
+//        })
+//    }
 }

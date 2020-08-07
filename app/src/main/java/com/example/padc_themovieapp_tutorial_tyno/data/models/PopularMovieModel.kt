@@ -14,9 +14,9 @@ interface PopularMovieModel {
 
     fun getAllActorsFromApiAndSaveToDatabase(onSuccess: () -> Unit,onError: (String) -> Unit)
 
-    fun getAllUpComing(onError : (String) -> Unit) : LiveData<List<UpComingVO>>
-
-    fun getAllUpComingFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit)
+//    fun getAllUpComing(onError : (String) -> Unit) : LiveData<List<UpComingVO>>
+//
+//    fun getAllUpComingFromApiAndSaveToDatabase(onSuccess: () -> Unit, onError: (String) -> Unit)
 
     fun getMovieDetail(movieId: Int, onSuccess: (movie : MovieDetailVO) -> Unit , onError: (String) -> Unit)
 

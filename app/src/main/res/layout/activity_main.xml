@@ -50,7 +50,8 @@
                 android:id="@+id/videoContainer"
                 android:layout_width="409dp"
                 android:layout_height="230dp"
-                android:outlineSpotShadowColor="#5E5A5A">
+                android:outlineSpotShadowColor="#5E5A5A"
+                android:layout_marginBottom="10dp">
                 <include layout = "@layout/layout_video"
                     android:id="@+id/vpSliderVideo"
                     android:layout_height="match_parent"

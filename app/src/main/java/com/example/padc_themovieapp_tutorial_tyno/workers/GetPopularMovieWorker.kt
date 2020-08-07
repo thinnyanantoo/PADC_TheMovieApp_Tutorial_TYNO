@@ -27,13 +27,13 @@ class GetPopularMovieWorker (context : Context, workerParams: WorkerParameters) 
             }
         )
 
-        mPopularModel.getAllUpComingFromApiAndSaveToDatabase(
-            onSuccess = {
-                result = Result.success()
-            },onError = {
-                result = Result.failure()
-            }
-                )
+//        mPopularModel.getAllUpComingFromApiAndSaveToDatabase(
+//            onSuccess = {
+//                result = Result.success()
+//            },onError = {
+//                result = Result.failure()
+//            }
+//                )
 
         mPopularModel.getAllGenereFromApiAndSaveToDatabase(
             onSuccess = {
