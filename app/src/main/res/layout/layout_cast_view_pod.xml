@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.padc_themovieapp_tutorial_tyno.views.viewpods.CastViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:background="#1E2633"
+    >
+
+    <TextView
+        style="@style/smallestText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="20dp"
+        android:text="ACTORS" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true"
+        tools:listitem="@layout/rv_actor_layout" />
+</com.example.padc_themovieapp_tutorial_tyno.views.viewpods.CastViewPod>
