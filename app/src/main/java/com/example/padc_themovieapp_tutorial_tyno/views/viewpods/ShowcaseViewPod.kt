@@ -12,9 +12,9 @@ import kotlinx.android.synthetic.main.layout_showcases.view.*
         context: Context, attrs: AttributeSet? = null, defStyleAttr : Int = 0
     ) : LinearLayout(context, attrs, defStyleAttr) {
 
-        override fun onFinishInflate() {
-            super.onFinishInflate()
-        }
+//        override fun onFinishInflate() {
+//            super.onFinishInflate()
+//        }
 
     fun bindShowCaseAdapter(showCaseAdapter: ShowCaseAdapter,showCaseMovie : MutableList<PopularMovieVO>){
         val linearLayoutManagerFilm = LinearLayoutManager(context,

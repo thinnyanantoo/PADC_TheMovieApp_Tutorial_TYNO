@@ -12,9 +12,9 @@ import kotlinx.android.synthetic.main.layout_tab_list_view_pod.view.*
 class TabPagerViewPod @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr : Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
-    override fun onFinishInflate() {
-        super.onFinishInflate()
-    }
+//    override fun onFinishInflate() {
+//        super.onFinishInflate()
+//    }
 
     fun onAttachTabAndPager(mrvfragmentAdapter: rvfragmentAdapter){
         tabLayout.removeAllTabs()

@@ -59,8 +59,8 @@
             </FrameLayout>
 
           <include layout="@layout/popular_movie_view_pod"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
               android:layout_marginStart="20dp"
               android:id="@+id/vpPopularMovie"/>
         </LinearLayout>
@@ -76,7 +76,7 @@
 
     <include
         android:id="@+id/vpShowCase"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         layout="@layout/layout_showcases"
         android:layout_marginTop="20dp"/>

@@ -6,6 +6,7 @@ import android.widget.BaseAdapter
 import com.example.padc_themovieapp_tutorial_tyno.R
 import com.example.padc_themovieapp_tutorial_tyno.data.vos.castVO
 import com.example.padc_themovieapp_tutorial_tyno.views.viewholders.CastViewHolder
+import com.example.shared.adapter.BaseRecyclerAdapter
 
 class CastAdapter : BaseRecyclerAdapter<CastViewHolder, castVO>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CastViewHolder {

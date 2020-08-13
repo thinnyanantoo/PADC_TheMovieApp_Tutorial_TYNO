@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() , MainView  {
         setPagerAndTab(generes)
     }
 
-    val movieId = 0
+   // val movieId = 0
 
     private lateinit var mPresenter: MainPresenter
 
@@ -52,12 +52,13 @@ class MainActivity : AppCompatActivity() , MainView  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewPodEmpty = vpEmpty as EmptyViewPod
+
         sliderViewPod = vpSliderVideo as SliderViewPod
         popularMovieViewPod = vpPopularMovie as PopularMovieViewPod
+        tabandPagerViewPod = vpTabAndPager as TabPagerViewPod
         showCaseViewPod = vpShowCase as ShowcaseViewPod
         actorviewPod = vpBestActor as BestActorViewPod
-        tabandPagerViewPod = vpTabAndPager as TabPagerViewPod
+        viewPodEmpty = vpEmpty as EmptyViewPod
 
         setUpPresenter()
         hideEmptyView()
@@ -82,7 +83,7 @@ class MainActivity : AppCompatActivity() , MainView  {
     }
 
     override fun displayPopularMovieList(movieList: List<PopularMovieVO>) {
-        setUpSlider(movieList)
+        setUpSlider(movieList.toMutableList())
        popularMovieViewPod.onbindAdapter(mRecyclerAdapter,movieList.toMutableList())
        showCaseViewPod.bindShowCaseAdapter(mShowCaseAdapter,movieList.toMutableList())
     }
@@ -91,7 +92,7 @@ class MainActivity : AppCompatActivity() , MainView  {
         actorviewPod.onBindActorAdapter(mActorRecyclerAdapter,actorList.toMutableList())
     }
 
-    private fun setUpSlider(movies : List<PopularMovieVO>){
+    private fun setUpSlider(movies : MutableList<PopularMovieVO>){
         msliderAdapter = ImageSliderAdapter(this)
         msliderAdapter.setData(movies.take(5))
         sliderViewPod.onAttachPagerAndTab(msliderAdapter)

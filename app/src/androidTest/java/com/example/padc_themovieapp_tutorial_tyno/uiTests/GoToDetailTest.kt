@@ -42,7 +42,7 @@ class GoToDetailTest {
     fun tapOnGenereMovie_navigateToMovieDetails(){
         Thread.sleep(3000)
         onView(withId(R.id.rvfragmentMovieList))
-            .perform(RecyclerViewActions.actionOnItemAtPosition<TabRecyclerViewHolder>(1, click()))
+            .perform(RecyclerViewActions.actionOnItemAtPosition<TabRecyclerViewHolder>(0, click()))
         onView(withId(R.id.tvOverView))
             .check(matches(isDisplayed()))
     }

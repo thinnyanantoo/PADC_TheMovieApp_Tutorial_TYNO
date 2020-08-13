@@ -24,10 +24,10 @@ import kotlinx.android.synthetic.main.layout_tab_list_view_pod.*
 
 class MovieListFragment : Fragment() , GenereFragmentView{
 
-//    override fun displayGenereList(generes: List<GenereVO>) {
+    //    override fun displayGenereList(generes: List<GenereVO>) {
 //        setPagerAndTab(generes)
 //    }
-     private lateinit var mTabAdapter: TabRecyclerAdapter
+    private lateinit var mTabAdapter: TabRecyclerAdapter
     private lateinit var mPresenter : GenereFragmentPresenter
 
     private lateinit var mrvfragmentAdapter: rvfragmentAdapter
@@ -55,7 +55,6 @@ class MovieListFragment : Fragment() , GenereFragmentView{
         super.onViewCreated(view, savedInstanceState)
 
         setUpPresenter()
-
         val genereId = arguments?.getInt(GENRE_ID_KEY) ?: 0
         setUpRecycler()
         mPresenter.onUiReady(this,genereId)
@@ -69,8 +68,8 @@ class MovieListFragment : Fragment() , GenereFragmentView{
 
     override fun navigateDetail(movieId: Int) {
         context?.let{
-                    startActivity(SecondActivity.newIntent(it, movieId))
-      }
+            startActivity(SecondActivity.newIntent(it, movieId))
+        }
 
     }
 
@@ -127,15 +126,15 @@ class MovieListFragment : Fragment() , GenereFragmentView{
         })
     }
 
-    }
+}
 
-    private fun showEmptyView(){
-     //   vpEmpty.visibility = View.VISIBLE
-    }
+private fun showEmptyView(){
+    //   vpEmpty.visibility = View.VISIBLE
+}
 
-    private fun hideEmptyView(){
-     //   vpEmpty.visibility = View.GONE
-    }
+private fun hideEmptyView(){
+    //   vpEmpty.visibility = View.GONE
+}
 
 
 

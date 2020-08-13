@@ -4,6 +4,7 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.example.padc_themovieapp_tutorial_tyno.data.vos.crewVO
 import com.example.padc_themovieapp_tutorial_tyno.utiils.IMAGE_URL
+import com.example.shared.viewholder.BaseViewHolder
 import kotlinx.android.synthetic.main.rv_creaters.view.*
 
 class CrewViewHolder(itemView : View) : BaseViewHolder<crewVO>(itemView) {

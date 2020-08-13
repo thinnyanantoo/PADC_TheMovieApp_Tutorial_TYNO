@@ -5,6 +5,7 @@ import com.bumptech.glide.Glide
 import com.example.padc_themovieapp_tutorial_tyno.data.vos.PopularMovieVO
 import com.example.padc_themovieapp_tutorial_tyno.delegates.MovieViewHolderDelegate
 import com.example.padc_themovieapp_tutorial_tyno.utiils.IMAGE_URL
+import com.example.shared.viewholder.BaseViewHolder
 import kotlinx.android.synthetic.main.rv_tab.view.*
 
 class TabRecyclerViewHolder (itemView : View, private val mDelegate : MovieViewHolderDelegate) : BaseViewHolder<PopularMovieVO>(itemView) {

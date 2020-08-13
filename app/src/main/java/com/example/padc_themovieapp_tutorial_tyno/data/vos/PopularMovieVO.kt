@@ -16,10 +16,10 @@ data class PopularMovieVO (
         @SerializedName("id") var id : Int = 0,
 
         @SerializedName("adult") var adult: Boolean = true,
-        @SerializedName("backdrop_path") var backdropPath : String = "",
+        @SerializedName("backdrop_path") var backdropPath : String? = "",
         @SerializedName("original_language")var originalLanguage : String = "",
         @SerializedName("original_title") var originalTitle : String = "",
-        @SerializedName("genre_ids") val genreIds : ArrayList<Int> = ArrayList(),
+        @SerializedName("genre_ids") var genreIds : ArrayList<Int> = ArrayList(),
         @SerializedName("title") var title : String = "",
         @SerializedName("vote_average")var voteAverage : Double = 0.0,
         @SerializedName("overview") var overview : String = "",

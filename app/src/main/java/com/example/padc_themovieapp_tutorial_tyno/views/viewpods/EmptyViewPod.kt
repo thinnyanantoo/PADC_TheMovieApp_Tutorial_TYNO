@@ -9,10 +9,10 @@ import kotlinx.android.synthetic.main.view_pod_empty.view.*
 class EmptyViewPod @JvmOverloads constructor(
     context: Context,attrs:AttributeSet? = null, defStyleAttr : Int = 0
 ) : RelativeLayout(context, attrs, defStyleAttr){
-    override fun onFinishInflate() {
-        super.onFinishInflate()
-
-    }
+//    override fun onFinishInflate() {
+//        super.onFinishInflate()
+//
+//    }
 
     fun setEmptyData(emptyMessage : String, emptyImageUrl: String){
         tvEmpty.text = emptyMessage

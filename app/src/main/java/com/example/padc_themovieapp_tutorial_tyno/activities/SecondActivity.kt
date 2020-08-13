@@ -67,10 +67,10 @@ class SecondActivity : AppCompatActivity() , SecondView {
 
 
         setUpPresenter()
-        setGetData()
         movieId = intent.getIntExtra(MOVIES_ID_EXTRA, 0)
         setUpRecycler()
         setUpListener()
+        setGetData()
         mPresenter.onUiReady(movieId)
 
     }

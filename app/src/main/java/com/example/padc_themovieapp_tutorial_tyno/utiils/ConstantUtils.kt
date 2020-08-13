@@ -1,10 +1,11 @@
 package com.example.padc_themovieapp_tutorial_tyno.utiils
 
 import android.graphics.Movie
+import com.example.padc_themovieapp_tutorial_tyno.BuildConfig
 import com.example.padc_themovieapp_tutorial_tyno.data.vos.*
 
 
-const val BASE_POPULAR_URL ="https://api.themoviedb.org/3/"
+const val BASE_POPULAR_URL =BuildConfig.BASE_POPULAR_URL
 
 const val GET_POPULAR_MOVIE="movie/popular"
 const val GET_ACTOR = "person/popular"
@@ -13,7 +14,8 @@ const val GET_MOVIES = "movie"
 
 const val PARAM_API_KEY= "api_key"
 
-const val API_VALUE = "b3f4ac68fcb0df03dafac748cba279a1"
+//const val API_VALUE = "b3f4ac68fcb0df03dafac748cba279a1"
+const val API_VALUE = BuildConfig.MY_API.toString()
 
 const val EM_NO_INTERNET_CONNECTION = "No Internet Connection"
 

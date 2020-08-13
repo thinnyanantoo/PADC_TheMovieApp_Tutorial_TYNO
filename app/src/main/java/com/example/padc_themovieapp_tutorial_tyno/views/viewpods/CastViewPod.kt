@@ -12,9 +12,9 @@ class CastViewPod  @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr : Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
-    override fun onFinishInflate() {
-        super.onFinishInflate()
-    }
+//    override fun onFinishInflate() {
+//        super.onFinishInflate()
+//    }
 
     fun onbindActorAdapter (castAdapter: CastAdapter){
         val linearLayoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)

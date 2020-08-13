@@ -18,7 +18,7 @@ data class UpComingVO (
     @SerializedName("id")var id: Int,
 
     @SerializedName("adult")var adult : Boolean,
-    @SerializedName("backdrop_path")var backdropPath : String,
+    @SerializedName("backdrop_path")var backdropPath : String? = "",
     @SerializedName("original_language")var originalLanguage : String,
     @SerializedName("original_title")var originalTitle : String,
     @SerializedName("genre_ids")var genreId : ArrayList<Int>,

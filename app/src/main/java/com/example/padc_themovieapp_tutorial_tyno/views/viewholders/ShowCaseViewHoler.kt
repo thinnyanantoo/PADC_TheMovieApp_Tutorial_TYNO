@@ -5,6 +5,7 @@ import com.bumptech.glide.Glide
 import com.example.padc_themovieapp_tutorial_tyno.data.vos.PopularMovieVO
 import com.example.padc_themovieapp_tutorial_tyno.delegates.MovieTabDelegate
 import com.example.padc_themovieapp_tutorial_tyno.utiils.IMAGE_URL
+import com.example.shared.viewholder.BaseViewHolder
 import kotlinx.android.synthetic.main.rv_movie_play_list.view.*
 
 class ShowCaseViewHoler(itemView: View,private val mDelegate : MovieTabDelegate) : BaseViewHolder<PopularMovieVO>(itemView){
